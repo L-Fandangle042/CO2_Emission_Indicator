@@ -1,4 +1,6 @@
 pandas
 numpy
-matplotlib.pyplot
-plotly.express
+matplotlib
+plotly
+uvicorn
+fastapi
