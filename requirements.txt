@@ -1,7 +1,8 @@
 pandas
 numpy
-matplotlib.pyplot
-plotly.express
+matplotlib
+plotly
+
 openpyxl
 statsmodels
 pandas_profiling
