@@ -4,3 +4,7 @@ matplotlib
 plotly
 uvicorn
 fastapi
+openpyxl
+statsmodels
+pandas_profiling
+ydata_profiling
