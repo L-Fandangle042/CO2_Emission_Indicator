@@ -2,3 +2,8 @@ pandas
 numpy
 matplotlib
 plotly
+
+openpyxl
+statsmodels
+pandas_profiling
+ydata_profiling
