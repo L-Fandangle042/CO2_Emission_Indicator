@@ -2,7 +2,8 @@ pandas
 numpy
 matplotlib
 plotly
-
+uvicorn
+fastapi
 openpyxl
 statsmodels
 pandas_profiling
