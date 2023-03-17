@@ -8,3 +8,5 @@ openpyxl
 statsmodels
 pandas_profiling
 ydata_profiling
+pmdarima
+seaborn
