@@ -212,4 +212,3 @@ class Country(str, Enum):
     South_Africa = 'South Africa'
     Zambia = 'Zambia'
     Zimbabwe = 'Zimbabwe'
-    
