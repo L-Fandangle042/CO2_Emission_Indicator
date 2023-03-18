@@ -10,7 +10,7 @@ from pandas import DataFrame
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.base.prediction import PredictionResults
 
-from api.Country import Country
+from Country import Country
 
 
 class ArimaTrainer:
