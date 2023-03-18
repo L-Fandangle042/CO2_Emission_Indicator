@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 
+from api.ArimaTrainer import ArimaTrainer
+from api.Country import Country
+
 api = FastAPI()
+
 
 # define a root `/` endpoint
 @api.get("/")
@@ -9,12 +13,9 @@ def index():
 
 
 @api.get("/predict")
-def predict(feature1, feature2):
+async def predict(country: Country = Country.China,
+                  max_predicted_year: int = 2030) -> bool:
+    assert max_predicted_year > 2022, "max_predicted_year must be greater than 2020"
+    assert max_predicted_year < 2050, "max_predicted_year must be less than 2050"
 
-    # model = picle.load_model()
-    # prediction = model.predict(feature1, feature2)
-
-    # Here, I'm only returning the features, since I don't actually have a model.
-    # In a real life setting, you would return the predictions.
-
-    return {'prediction': int(feature1)*int(feature2)}
+    return ArimaTrainer().execute(country, max_predicted_year, 'cloud')
