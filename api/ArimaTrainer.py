@@ -1,5 +1,5 @@
 import os
-
+from os.path import join
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -15,8 +15,8 @@ from api.Country import Country
 
 class ArimaTrainer:
 
-    raw_data_path = 'data/carbon_dioxide/CO2_YEARLY_DATA_1970-2021.xlsx'
-    preprocessed_data_path = 'data/carbon_dioxide/CO2_YEARLY_preprocessed.csv'
+    raw_data_path = join('..','data','carbon_dioxide','CO2_YEARLY_DATA_1970-2021.xlsx')
+    preprocessed_data_path = join('..','data','carbon_dioxide','CO2_YEARLY_preprocessed.csv')
 
     def preprocess(self) -> DataFrame:
         data = pd.read_excel(self.raw_data_path, sheet_name="TOTALS BY COUNTRY", skiprows=[0, 1, 2, 3, 4, 5, 6, 7, 8],
