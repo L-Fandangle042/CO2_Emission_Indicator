@@ -2,9 +2,13 @@ pandas
 numpy
 matplotlib
 plotly
+uvicorn
+fastapi
 openpyxl
 statsmodels
 pandas_profiling
 ydata_profiling
+pmdarima
+seaborn
 tensorflow-macos
 tensorflow-metal
