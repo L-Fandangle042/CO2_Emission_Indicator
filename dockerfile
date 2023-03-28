@@ -6,6 +6,7 @@ FROM python:3.8.6-buster
 # Here, we will include our api_folder and the requiremenets.txt file
 COPY api /api
 COPY requirements.txt /requirements.txt
+COPY data /data
 
 # RUN allows you to run terminal commands when your image gets created
 # Here, we upgrade pip and install the libraries in our requirements.txt
