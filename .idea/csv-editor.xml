@@ -45,6 +45,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/data/preprocessed_cc.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/preprocessed_no_gdp_cc.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/data/world_country_gdp_preprocessed_cc.csv">
           <value>
             <Attribute>
