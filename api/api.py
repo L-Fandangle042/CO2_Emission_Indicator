@@ -1,11 +1,9 @@
 from fastapi import FastAPI
-from pandas import DataFrame
 
 from api.ArimaTrainer import ArimaTrainer
 from api.Country import Country
 from api.RnnTrainer import RnnTrainer
-from api.preprocess.Ch4Preprocessor import Ch4Preprocessor
-from api.preprocess.N2oPreprocessor import N2oPreprocessor
+
 
 api = FastAPI()
 
@@ -26,5 +24,5 @@ async def predict(country: Country = Country.China,
 
 
 @api.get("/predict/rnn")
-async def predict() -> bool:
-    return RnnTrainer().execute()
+async def predict(with_gdp: str = 'co2') -> bool:
+    return RnnTrainer().execute(with_gdp)
