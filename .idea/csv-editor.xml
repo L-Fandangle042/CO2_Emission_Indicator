@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/data/carbon_dioxide/CO2_YEARLY_preprocessed_cc.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/data/methane/CH4_YEARLY_preprocessed.csv">
           <value>
             <Attribute>
@@ -17,7 +24,35 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/data/methane/CH4_YEARLY_preprocessed_cc.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/data/nitrogen_dioxide/N2O_YEARLY_preprocessed.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/nitrogen_dioxide/N2O_YEARLY_preprocessed_cc.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/world_country_gdp_preprocessed_cc.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/world_country_gdp_usd.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
