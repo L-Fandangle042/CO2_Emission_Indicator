@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 from api.ArimaTrainer import ArimaTrainer
 from api.Country import Country
+from api.RnnPredictor import RnnPredictor
 from api.RnnTrainer import RnnTrainer
 
 
@@ -23,6 +24,12 @@ async def predict(country: Country = Country.China,
     return ArimaTrainer().execute(country, max_predicted_year, 'cloud')
 
 
+# closed for online training
+# @api.get("/train/rnn")
+# async def predict(horizon: int = 9) -> bool:
+#     return RnnTrainer().execute(horizon)
+
+
 @api.get("/predict/rnn")
-async def predict(with_gdp: str = 'co2') -> bool:
-    return RnnTrainer().execute(with_gdp)
+async def predict(country_code: str = 'FRA', horizon: int = 9) -> bool:
+    return RnnPredictor().predict(country_code, horizon, 'cloud')
