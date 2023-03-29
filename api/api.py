@@ -1,11 +1,10 @@
 from fastapi import FastAPI
-from pandas import DataFrame
 
 from api.ArimaTrainer import ArimaTrainer
 from api.Country import Country
+from api.RnnPredictor import RnnPredictor
 from api.RnnTrainer import RnnTrainer
-from api.preprocess.Ch4Preprocessor import Ch4Preprocessor
-from api.preprocess.N2oPreprocessor import N2oPreprocessor
+
 
 api = FastAPI()
 
@@ -25,6 +24,36 @@ async def predict(country: Country = Country.China,
     return ArimaTrainer().execute(country, max_predicted_year, 'cloud')
 
 
+# closed for online training
+# @api.get("/train/rnn")
+# async def predict(horizon: int = 9,
+#                   learning_rate: float = 0.001,
+#                   lstm_units: int = 50,
+#                   first_dense_layer: int = 32,
+#                   second_dense_layer: int = 16,
+#                   loss: str = 'mse',
+#                   patience: int = 5,
+#                   validation_split: float = 0.25,
+#                   batch_size: int = 32,
+#                   epochs: int = 100,
+#                   dropout_rate: float = 0.2,
+#                   add_second_layer: bool = False,
+#                   env: str = 'cloud') -> bool:
+#     return RnnTrainer().execute(horizon=horizon,
+#                                 learning_rate=learning_rate,
+#                                 lstm_units=lstm_units,
+#                                 first_dense_layer=first_dense_layer,
+#                                 second_dense_layer=second_dense_layer,
+#                                 loss=loss,
+#                                 patience=patience,
+#                                 validation_split=validation_split,
+#                                 batch_size=batch_size,
+#                                 epochs=epochs,
+#                                 dropout_rate=dropout_rate,
+#                                 add_second_layer=add_second_layer,
+#                                 env=env)
+
+
 @api.get("/predict/rnn")
-async def predict() -> bool:
-    return RnnTrainer().execute()
+async def predict(country_code: str = 'FRA', horizon: int = 9) -> bool:
+    return RnnPredictor().predict(country_code, horizon, 'cloud')
