@@ -32,7 +32,6 @@ class Preprocessor(ABC):
         return df
 
     def preprocess_gases(self) -> DataFrame:
-
         if os.path.exists(self.get_preprocessed_data_path()):
             return pd.read_csv(self.get_preprocessed_data_path())
         else:
